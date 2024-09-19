@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tip Calculator App</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <h1 class="title">
+        SPLITTER
+    </h1>
+
+    <main>
+        <div class="calculator-box">
+            <div class="bill-sum-box">
+                <p>Bill</p>
+                <div class="input-container">
+                    <span class="icon">
+                        <img src="images/dolaricon.png" alt="Dollar Icon">
+                    </span>
+                    <input type="number" id="bill-input" class="bill-input" placeholder="0">
+                </div>
+
+            </div>
+
+            <div class="select-tip-percentages-box">
+                <p>Select Tip %</p>
+                <div class="select-tip-btns-wraper">
+                    <button class="tip-btn" data-tip="5">5%</button>
+                    <button class="tip-btn" data-tip="10">10%</button>
+                    <button class="tip-btn" data-tip="15">15%</button>
+                    <button class="tip-btn" data-tip="25">25%</button>
+                    <button class="tip-btn" data-tip="50">50%</button>
+                    <input type="number" id="custom-tip" class="custom-tip" placeholder="Custom" />
+                </div>
+            </div>
+
+            <div class="numb-people-box">
+                <p>Number of People</p>
+                <div class="input-container">
+                    <span class="icon">
+                        <img src="images/peopleicon.png" alt="People Icon">
+                    </span>
+                    <input type="number" id="people-input" class="people-input" placeholder="0">
+                </div>
+                <p class="error-message" id="error-message"></p>
+            </div>
+
+        </div>
+
+        <div class="sum-box">
+            <div class="tip-amount-row">
+                <div class="title-sum">
+                    Tip Amount<br><span>/ person</span>
+                </div>
+                <div id="tip-amount" class="tip-amount">$0.00</div>
+            </div>
+
+            <div class="total-row">
+                <div class="title-sum">
+                    Total<br><span>/ person</span>
+                </div>
+                <div id="total-amount" class="total-amount">$0.00</div>
+            </div>
+            <button id="reset-btn" class="reset-btn" type="button">RESET</button>
+        </div>
+    </main>
+
+    <script src="js/scripts.js"></script>
+</body>
+
+</html>

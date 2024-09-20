@@ -1,36 +1,56 @@
+:root {
+    --bg-color: rgb(180, 255, 255);
+    --container-bg-color: rgb(249, 252, 255);
+    --title-color: rgb(91, 165, 165);
+    --text-color: rgb(110, 110, 110);
+    --border-color: rgb(38, 108, 136);
+    --input-bg-color: rgb(230, 243, 255);
+    --input-text-color: rgb(155, 155, 155);
+    --tip-btn-bg-color: rgb(38, 108, 136);
+    --tip-btn-hover-color: rgb(70, 145, 175);
+    --custom-tip-bg-color: aliceblue;
+    --sum-box-bg-color: rgb(38, 108, 136);
+    --sum-text-color: white;
+    --tip-amount-color: rgb(87, 223, 143);
+    --title-sum-color: rgb(177, 177, 177);
+    --reset-btn-bg-color: rgb(196, 238, 255);
+    --reset-btn-text-color: rgb(38, 108, 136);
+}
+
 * {
     margin: 0;
     padding: 0;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: system-ui;
 }
 
 body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: rgb(180, 255, 255);
+    background-color: var(--bg-color);
 }
 
 main {
     display: flex;
     width: 700px;
     height: 350px;
-    background-color: rgb(249, 252, 255);
+    background-color: var(--container-bg-color);
     padding: 40px;
     border-radius: 22px;
     gap: 30px;
 }
 
 .title {
-    color: rgb(91, 165, 165);
+    color: var(--title-color);
     padding: 50px;
+    font-size: 54px;
     font-weight: 400;
 }
 
 .calculator-box {
     height: 100%;
     width: 55%;
-    color: rgb(110, 110, 110);
+    color: var(--text-color);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -48,7 +68,7 @@ main {
 .bill-input,
 .people-input {
     height: 40px;
-    border: rgb(38, 108, 136) solid 2;
+    border: var(--border-color) solid 2;
 }
 
 .numb-people-box {
@@ -81,9 +101,9 @@ main {
     box-sizing: border-box;
     text-align: right;
     font-size: 20px;
-    color: rgb(155, 155, 155);
+    color: var(--input-text-color);
     border: 0;
-    background-color: rgb(230, 243, 255);
+    background-color: var(--input-bg-color);
 }
 
 .select-tip-percentages-box>p {
@@ -98,10 +118,14 @@ main {
 }
 
 .tip-btn {
-    color: aliceblue;
+    color: var(--custom-tip-bg-color);
     font-size: 20px;
     font-weight: 500;
-    background-color: rgb(38, 108, 136);
+    background-color: var(--tip-btn-bg-color);
+}
+
+.tip-btn:hover {
+    background-color: var(--tip-btn-hover-color);
 }
 
 .select-tip-btns-wraper {
@@ -115,7 +139,7 @@ main {
 .custom-tip {
     height: 40px;
     width: 90px;
-    background-color: aliceblue;
+    background-color: var(--custom-tip-bg-color);
     text-align: center;
 }
 
@@ -127,12 +151,12 @@ main {
 }
 
 .sum-box {
-    background-color: rgb(38, 108, 136);
+    background-color: var(--sum-box-bg-color);
     margin-left: 20px;
     border-radius: 18px;
     padding: 40px;
     width: 45%;
-    color: white;
+    color: var(--sum-text-color);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -152,13 +176,13 @@ main {
 }
 
 .title-sum>span {
-    color: rgb(177, 177, 177);
+    color: var(--title-sum-color);
 }
 
 .tip-amount,
 .total-amount {
     font-size: 45px;
-    color: rgb(87, 223, 143);
+    color: var(--tip-amount-color);
     font-weight: 700;
 }
 
@@ -168,8 +192,8 @@ main {
     border: 0;
     border-radius: 5px;
     font-size: 22px;
-    background-color: rgb(196, 238, 255);
-    color: rgb(38, 108, 136);
+    background-color: var(--reset-btn-bg-color);
+    color: var(--reset-btn-text-color);
     font-weight: 600;
 }
 
@@ -181,4 +205,39 @@ input[type="number"]::-webkit-outer-spin-button {
 
 input[type="number"] {
     -moz-appearance: textfield;
+}
+
+
+@media (max-width: 599px) {
+    main {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .sum-box {
+        width: 100%;
+        margin-left: 25px;
+        margin-right: 25px;
+        padding: 15px;
+    }
+
+    .calculator-box {
+        width: 100%;
+    }
+}
+
+
+@media (max-width: 767px) {
+    .title {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 1023px) {
+    main {
+        width: 80%;
+        height: fit-content;
+        background-color: var(--container-bg-color);
+    }
 }

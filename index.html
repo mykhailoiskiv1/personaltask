@@ -4,30 +4,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="A simple and efficient tip calculator app to quickly calculate tips and total amounts per person. Perfect for dining out and splitting bills.">
+    <meta name="keywords"
+        content="tip calculator, tip app, bill splitter, calculate tip, dining out, restaurant, split bill, tip percentage, tip amount, total per person">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <meta property="og:title" content="Tip Calculator App">
+    <meta property="og:description"
+        content="A simple and efficient tip calculator app to quickly calculate tips and total amounts per person. Perfect for dining out and splitting bills.">
+    <meta property="og:image"
+        content="https://res.cloudinary.com/dz209s6jk/image/upload/v1625752957/Challenges/hxkpctp6cd1meeytfdl2.jpg">
+    <meta property="og:url" content="https://mykhailoiskiv1.github.io/personaltask/">
+    <meta property="og:type" content="website">
     <title>Tip Calculator App</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
-    <h1 class="title">
-        SPLITTER
-    </h1>
+    <header class="title">
+        <span>SPLITTER</span>
+    </header>
 
     <main>
-        <div class="calculator-box">
+        <section class="calculator-box">
             <div class="bill-sum-box">
-                <p>Bill</p>
+                <label for="bill-input">Bill</label>
                 <div class="input-container">
                     <span class="icon">
-                        <img src="images/dolaricon.png" alt="Dollar Icon">
+                        <img src="images/dolaricon.svg" alt="Dollar Icon">
                     </span>
                     <input type="number" id="bill-input" class="bill-input" placeholder="0">
                 </div>
-
             </div>
-
             <div class="select-tip-percentages-box">
-                <p>Select Tip %</p>
+                <label for="select-tip-btns-wraper">Select Tip %</label>
                 <div class="select-tip-btns-wraper">
                     <button class="tip-btn" data-tip="5">5%</button>
                     <button class="tip-btn" data-tip="10">10%</button>
@@ -37,28 +47,24 @@
                     <input type="number" id="custom-tip" class="custom-tip" placeholder="Custom" />
                 </div>
             </div>
-
             <div class="numb-people-box">
-                <p>Number of People</p>
+                <label for="people-input">Number of People</label>
                 <div class="input-container">
                     <span class="icon">
-                        <img src="images/peopleicon.png" alt="People Icon">
+                        <img src="images/peopleicon.svg" alt="People Icon">
                     </span>
-                    <input type="number" id="people-input" class="people-input" placeholder="0">
+                    <input type="number" id="people-input" class="people-input" placeholder="1">
                 </div>
                 <p class="error-message" id="error-message"></p>
             </div>
-
-        </div>
-
-        <div class="sum-box">
+        </section>
+        <section class="sum-box">
             <div class="tip-amount-row">
                 <div class="title-sum">
                     Tip Amount<br><span>/ person</span>
                 </div>
                 <div id="tip-amount" class="tip-amount">$0.00</div>
             </div>
-
             <div class="total-row">
                 <div class="title-sum">
                     Total<br><span>/ person</span>
@@ -66,7 +72,7 @@
                 <div id="total-amount" class="total-amount">$0.00</div>
             </div>
             <button id="reset-btn" class="reset-btn" type="button">RESET</button>
-        </div>
+        </section>
     </main>
 
     <script src="js/scripts.js"></script>

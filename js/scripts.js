@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener( function () {
     const billInput = document.getElementById('bill-input');
     const peopleInput = document.getElementById('people-input');
     const tipButtons = document.querySelectorAll('.tip-btn');
